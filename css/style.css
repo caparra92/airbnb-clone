@@ -6,7 +6,45 @@
 
 html,
 body {
-    height: 100%;
     margin: 0;
     padding: 0;
+}
+
+h1{
+    padding: 10px;
+}
+
+.label {
+    font-size: 0.8em;
+    width: 2em !important;
+}
+
+.mapContainer {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#mapid {
+    height: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+form {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    width: 100% !important;
+}
+
+.card {
+    width: 15rem;
+}
+
+.footer {
+    color: #fff;
+    font-size: 1em;
 }

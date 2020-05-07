@@ -6,7 +6,7 @@
         let lng = ubicacion.longitude;
 
         //var map = document.getElementById('map');
-        var mymap = L.map('mapid').setView([lat,lng], 13);
+        var mymap = L.map('mapid').setView([lat, lng], 13);
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2FwYXJyYTkyIiwiYSI6ImNrOXcxMmozOTAyMW8zZnFzcGNmMm8wOWUifQ.W9lU97CRGtGpCtdCdTw3mw', {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
             maxZoom: 18,
@@ -24,14 +24,17 @@ fetch('https://api.sheety.co/30b6e400-9023-4a15-8e6c-16aa4e3b1e72')
         response.json().then(data => {
             let container = document.querySelector('#cardContainer');
             container.innerHTML = '';
-            for(let item of data) {
+            for (let item of data) {
                 container.innerHTML += `<div class="col-md-3">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <img src="${item.photo}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">${item.property_type}</h5>
                         <p class="card-text">${item.name}</p>
                         <a href="#" class="btn btn-primary">Escolher</a>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">R$${item.price}</small>
                     </div>
                 </div>
             </div>`
