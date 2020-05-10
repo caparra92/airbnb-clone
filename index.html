@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
         crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Airbnb Clone</title>
 </head>
@@ -22,16 +25,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand" href="#">Airbnb clone</a>
+                <a class="navbar-brand" href="index.html"><img src="img/air.png" alt="logo" width="80" height="80"></a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                 </ul>
             </div>
@@ -39,43 +39,101 @@
         <h1>Procura hospedagem ou ganhar dinheiro?</h1>
         <div class="row">
             <div class="col-md-12">
-                <form>
-                    <div class="form-row align-items-center">
-                        <div class="col-sm-3 my-1">
-                            <label class="sr-only" for="place">Pra onde vc vai?</label>
-                            <input type="text" class="form-control" id="place" placeholder="Pra onde vc vai?">
-                        </div>
-                        <div class="col-sm-1">
-                            <label class="form-label" for="check-in">Check in</label>
-                        </div>
-                        <div class="col-sm-2 my-1">
-                            <div class="input-group">
-                                <input type="date" class="form-control" id="check-in">
-                            </div>
-                        </div>
-                        <div class="col-sm-1">
-                            <label class="form-label" for="check-out">Check out</label>
-                        </div>
-                        <div class="col-sm-2 my-1">
-                            <div class="input-group">
-                                <input type="date" class="form-control" id="check-out">
-                            </div>
-                        </div>
-                        <div class="col-sm-3 my-1">
-                            <button type="submit" class="btn btn-primary">Procurar</button>
+                <div class="form-row align-items-center" id="formBusca">
+                    <div class="col-sm-3 my-1">
+                        <label class="sr-only" for="place">Pra onde vc vai?</label>
+                        <input type="text" class="form-control" id="place" placeholder="Pra onde vc vai?">
+                    </div>
+                    <div class="col-sm-1">
+                        <label class="form-label" for="check-in">Check in</label>
+                    </div>
+                    <div class="col-sm-2 my-1">
+                        <div class="input-group">
+                            <input type="date" class="form-control" id="check-in">
                         </div>
                     </div>
-                </form>
+                    <div class="col-sm-1">
+                        <label class="form-label" for="check-out">Check out</label>
+                    </div>
+                    <div class="col-sm-2 my-1">
+                        <div class="input-group">
+                            <input type="date" class="form-control" id="check-out">
+                        </div>
+                    </div>
+                    <div class="col-sm-3 my-1">
+                        <button type="submit" class="btn btn-primary" id="btn_busca">Procurar</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 mapContainer">
-                <div id="mapid"></div>
+            <div class="col-md-3">
+                <div class="card info">
+                    <img src="img/card1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Conecte com pessoas</h5>
+                        <p class="card-text">Conecte com muitas pessoas ao seu redor e procure por quartos, apartamentos
+                            ou casas completas</p>
+                        <a href="#" class="btn btn-primary">Saiba mais...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card info">
+                    <img src="img/card2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Viaje mais</h5>
+                        <p class="card-text">Viaje mais e conheça os melhores lugares do Brasil e do mundo graças a
+                            nossa parceria com os melhores hoteles das pricipais cidades do mundo.</p>
+                        <a href="#" class="btn btn-primary">Saiba mais...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card info">
+                    <img src="img/card3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Comparta experiências</h5>
+                        <p class="card-text">Comparta seus depoimentos no nosso blog ou deixando seu comentarios no app
+                            antes ou após sua estancia.</p>
+                        <a href="#" class="btn btn-primary">Saiba mais...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card info">
+                    <img src="img/card4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Faça sem sair de casa</h5>
+                        <p class="card-text">Vc pode fazer seus pedidos pelo app ou pelo website no conforto da sua casa
+                            e com a melhor experiência de navegação.</p>
+                        <a href="#" class="btn btn-primary">Saiba mais...</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row" id="cardContainer" class="cardContainer">
-
+        <h1 id="mapContainer">Temos algumas bas opções pra vc</h1>
+        <div class="col-md-12 mapContainer">
+            <div id="mapid"></div>
         </div>
+    </div>
+    <div class="row" id="cardContainer" class="cardContainer">
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="about" id="about">
+                <h1>About</h1>
+                <div class="col-md-6">
+                    <p>Site criado para o desafio Airbnb do Hiring Coders, confira o repositorio deste projeto no
+                        Github e me ajuda com suas issues</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="#" alt="" class="thumbnail">
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
     <div class="footer text-center p-5 bg-dark">&copy;Camilo Parra - 2020</div>
 
@@ -88,9 +146,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-        crossorigin=""></script>
     <script src="js/localization.js"></script>
     <script src="js/index.js"></script>
 

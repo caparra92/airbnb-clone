@@ -6,7 +6,9 @@
 
 html,
 body {
-    margin: 0;
+    scroll-behavior: smooth;
+    width: 100%;
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -39,11 +41,34 @@ form {
 
 .btn {
     width: 100% !important;
+    border: none;
+    background: radial-gradient(circle at center, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100% ) !important;
 }
 
 .card {
-    width: 15rem;
+    width: 18rem;
+    margin: 0 auto;
 }
+
+.info {
+    width: 17rem;
+    cursor: pointer;
+}
+
+.card-text {
+    height: 10rem;
+}
+
+.about {
+    height: 100vh;
+}
+
+.about h1 {
+    text-align: center;
+    font-size: 5em;
+    margin-bottom: 40px;
+}
+
 
 .footer {
     color: #fff;
