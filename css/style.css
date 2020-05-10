@@ -26,13 +26,7 @@ h1{
     padding: 10px;
 }
 
-#mapid {
-    height: 500px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-form {
+.form-busca {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -48,29 +42,42 @@ form {
 .card {
     width: 18rem;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .info {
     width: 17rem;
     cursor: pointer;
+    box-shadow: 2px 2px 5px #ccc;
 }
 
 .card-text {
-    height: 10rem;
-}
-
-.about {
-    height: 100vh;
+    height: 7rem;
 }
 
 .about h1 {
     text-align: center;
     font-size: 5em;
-    margin-bottom: 40px;
+    margin: 0 auto;
 }
 
 
 .footer {
     color: #fff;
     font-size: 1em;
+}
+
+.danger {
+    border-color: #FF385C;
+}
+
+.success {
+    border-color: rgb(2, 145, 14);
+}
+
+.img-center {
+    display: block;
+    margin: 50px auto;
+    padding: 0 auto;
+    border-radius: 50%;
 }
